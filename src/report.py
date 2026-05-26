@@ -83,7 +83,7 @@ def render_report(
     <p>A retrieval-grounded review screen for an announced acquisition: key terms, outstanding conditions, dated evidence and a small evaluation set.</p>
   </header>
   <main>
-    <div class="notice"><strong>Synthetic document pack only.</strong> This dashboard is not investment advice, does not use Jerpoint data and does not recommend a position.</div>
+    <div class="notice"><strong>Synthetic document pack only.</strong> This dashboard is not investment advice, does not use real firm data and does not recommend a position.</div>
     <section class="metrics">
       <div class="metric"><span>Transaction</span><strong>Helix / Northbridge</strong></div>
       <div class="metric"><span>Source passages</span><strong>{len(passages)}</strong></div>
@@ -145,4 +145,3 @@ def _document_row(passage: Passage) -> str:
         f"<td>{escape(passage.text)}</td>"
         "</tr>"
     )
-
