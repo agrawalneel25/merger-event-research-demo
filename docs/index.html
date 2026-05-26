@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Merger Event Research Assistant</title>
+  <style>
+    :root {
+      --navy: #101b30;
+      --blue: #365e91;
+      --paper: #f6f5f2;
+      --surface: #ffffff;
+      --ink: #192438;
+      --muted: #667287;
+      --border: #e0dfdc;
+      --green: #17724e;
+      --green-bg: #daf0e6;
+      --gold: #b48231;
+      --gold-bg: #f6ecd7;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, Helvetica, sans-serif; }
+    header { background: var(--navy); color: white; padding: 42px max(24px, calc((100% - 1160px) / 2)); }
+    .tag { color: #94bce7; font-size: 12px; font-weight: bold; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { font-size: clamp(32px, 5vw, 48px); margin: 11px 0 13px; }
+    header p { color: #d6deea; line-height: 1.55; margin: 0; max-width: 780px; }
+    main { max-width: 1160px; margin: 0 auto; padding: 26px 24px 48px; }
+    .notice { background: var(--gold-bg); border-radius: 12px; color: #59441b; margin-bottom: 22px; padding: 14px 18px; font-size: 14px; }
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 26px; }
+    .metric, .panel, .card { background: var(--surface); border: 1px solid var(--border); border-radius: 15px; }
+    .metric { padding: 17px; }
+    .metric span { color: var(--muted); display: block; font-size: 13px; margin-bottom: 8px; }
+    .metric strong { font-size: 29px; }
+    h2 { font-size: 20px; margin: 0 0 15px; }
+    .cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; margin-bottom: 27px; }
+    .card { padding: 19px; }
+    .card h3 { color: var(--blue); font-size: 14px; letter-spacing: .06em; margin: 0 0 10px; text-transform: uppercase; }
+    .answer { font-size: 14px; line-height: 1.55; margin: 0 0 12px; }
+    .source { color: var(--muted); font-size: 12px; }
+    .panel { margin-bottom: 25px; overflow: hidden; padding: 20px; }
+    table { border-collapse: collapse; font-size: 14px; width: 100%; }
+    th { border-bottom: 1px solid var(--border); color: var(--muted); font-size: 12px; padding: 10px 8px; text-align: left; text-transform: uppercase; }
+    td { border-bottom: 1px solid #eeece8; line-height: 1.45; padding: 11px 8px; vertical-align: top; }
+    tr:last-child td { border-bottom: none; }
+    .pass { background: var(--green-bg); border-radius: 20px; color: var(--green); font-size: 12px; font-weight: bold; padding: 5px 10px; }
+    code { background: #eef1f4; border-radius: 4px; font-size: 12px; padding: 2px 5px; }
+    footer { color: var(--muted); font-size: 13px; line-height: 1.55; }
+    @media (max-width: 820px) { .metrics, .cards { grid-template-columns: repeat(2, 1fr); } .panel { overflow-x: auto; } }
+    @media (max-width: 540px) { .metrics, .cards { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="tag">Illustrative event-driven research prototype</div>
+    <h1>Merger Event Research Assistant</h1>
+    <p>A retrieval-grounded review screen for an announced acquisition: key terms, outstanding conditions, dated evidence and a small evaluation set.</p>
+  </header>
+  <main>
+    <div class="notice"><strong>Synthetic document pack only.</strong> This dashboard is not investment advice, does not use Jerpoint data and does not recommend a position.</div>
+    <section class="metrics">
+      <div class="metric"><span>Transaction</span><strong>Helix / Northbridge</strong></div>
+      <div class="metric"><span>Source passages</span><strong>7</strong></div>
+      <div class="metric"><span>Evaluation queries</span><strong>4</strong></div>
+      <div class="metric"><span>Grounded top hits</span><strong>4/4</strong></div>
+    </section>
+    <section>
+      <h2>Transaction brief with cited evidence</h2>
+      <div class="cards"><article class="card"><h3>Consideration</h3><p class="answer">Helix Holdings Ltd has agreed to acquire Northbridge Software plc by scheme of arrangement. Northbridge shareholders will receive 620 pence in cash for each Northbridge share. The acquisition implies an equity value of approximately GBP 1.24 billion.</p><div class="source">Source: <code>offer_announcement</code>, Offer Terms, 2026-06-03</div></article>
+<article class="card"><h3>Outstanding Condition</h3><p class="answer">Clearance from the Competition and Markets Authority remains outstanding. The current Phase 1 statutory deadline is 15 September 2026. Helix stated that it continues to engage constructively with the authority.</p><div class="source">Source: <code>regulatory_update</code>, Competition Review, 2026-07-18</div></article>
+<article class="card"><h3>Long-Stop Date</h3><p class="answer">The long-stop date is 15 December 2026. If the scheme has not become effective by that date, the acquisition will lapse unless Helix and Northbridge agree an extension with the required consent.</p><div class="source">Source: <code>scheme_document</code>, Long Stop Date, 2026-06-30</div></article>
+<article class="card"><h3>Financing</h3><p class="answer">Helix confirms that committed financing is available to satisfy the cash consideration in full. The acquisition is not conditional on financing.</p><div class="source">Source: <code>financing_confirmation</code>, Financing, 2026-07-02</div></article></div>
+    </section>
+    <section class="panel">
+      <h2>Retrieval evaluation</h2>
+      <table>
+        <thead><tr><th>Question</th><th>Top retrieved source</th><th>Check</th></tr></thead>
+        <tbody><tr><td>What cash consideration will a Northbridge shareholder receive for each share?</td><td><code>offer_announcement / Offer Terms</code></td><td><span class="pass">Pass</span></td></tr>
+<tr><td>Which regulatory clearance remains outstanding and what is the deadline?</td><td><code>regulatory_update / Competition Review</code></td><td><span class="pass">Pass</span></td></tr>
+<tr><td>What is the long-stop date for the scheme?</td><td><code>scheme_document / Long Stop Date</code></td><td><span class="pass">Pass</span></td></tr>
+<tr><td>Is completion conditional on financing?</td><td><code>financing_confirmation / Financing</code></td><td><span class="pass">Pass</span></td></tr></tbody>
+      </table>
+    </section>
+    <section class="panel">
+      <h2>Synthetic source pack</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Document</th><th>Section</th><th>Passage</th></tr></thead>
+        <tbody><tr><td>2026-06-03</td><td>Recommended Cash Acquisition Announcement</td><td>Offer Terms</td><td>Helix Holdings Ltd has agreed to acquire Northbridge Software plc by scheme of arrangement. Northbridge shareholders will receive 620 pence in cash for each Northbridge share. The acquisition implies an equity value of approximately GBP 1.24 billion.</td></tr>
+<tr><td>2026-06-03</td><td>Recommended Cash Acquisition Announcement</td><td>Structure and Timetable</td><td>The acquisition is intended to be implemented by a court-sanctioned scheme of arrangement. Completion is expected in the fourth quarter of 2026, subject to shareholder approval, court sanction and regulatory clearances.</td></tr>
+<tr><td>2026-06-30</td><td>Scheme Document</td><td>Shareholder Meetings</td><td>The scheme meeting and general meeting will be held on 20 August 2026. Approval requires the relevant shareholder majorities specified in the scheme document.</td></tr>
+<tr><td>2026-06-30</td><td>Scheme Document</td><td>Long Stop Date</td><td>The long-stop date is 15 December 2026. If the scheme has not become effective by that date, the acquisition will lapse unless Helix and Northbridge agree an extension with the required consent.</td></tr>
+<tr><td>2026-07-02</td><td>Financing Confirmation</td><td>Financing</td><td>Helix confirms that committed financing is available to satisfy the cash consideration in full. The acquisition is not conditional on financing.</td></tr>
+<tr><td>2026-07-18</td><td>Regulatory Update</td><td>Competition Review</td><td>Clearance from the Competition and Markets Authority remains outstanding. The current Phase 1 statutory deadline is 15 September 2026. Helix stated that it continues to engage constructively with the authority.</td></tr>
+<tr><td>2026-07-22</td><td>Northbridge Trading Update</td><td>Current Trading</td><td>Northbridge reported that current trading remains in line with the board&#x27;s expectations. The board stated that the trading update does not change its recommendation of the acquisition.</td></tr></tbody>
+      </table>
+    </section>
+    <footer>
+      Method: deterministic token-based retrieval ranks synthetic document passages for each diligence question. The default brief displays retrieved evidence directly. An optional Claude route can generate a cited answer from retrieved passages only and is instructed not to recommend a trade.
+    </footer>
+  </main>
+</body>
+</html>
