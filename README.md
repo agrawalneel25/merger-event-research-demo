@@ -4,6 +4,8 @@ An illustrative document-retrieval prototype for event-driven equity research. I
 
 This project uses synthetic deal documents only. It is not connected to Jerpoint Capital, does not use confidential or live market data, and does not make investment recommendations.
 
+**Live dashboard:** https://agrawalneel25.github.io/merger-event-research-demo/
+
 ![Generated dashboard preview](docs/dashboard.png)
 
 ## Quick Tour
